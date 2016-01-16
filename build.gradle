@@ -4,12 +4,16 @@ version '0.7.2-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "com.example.helloj.Hello"
+mainClassName = "com.example.helloj.Application"
 
 sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    compile project(':hello')
 }
 
 run {
