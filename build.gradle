@@ -12,6 +12,10 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    compile project(':hello')
+}
+
 run {
     standardInput = System.in
 }
