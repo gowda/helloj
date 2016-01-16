@@ -12,7 +12,9 @@ public class Hello {
 	    scanner = new Scanner(System.in);
 	    scanner.useDelimiter("\\n");
 	    String line = scanner.nextLine();
-	    String name = line.replaceAll("\\s", "");
+	    String name = line.replaceAll("^\\s+", "")
+		.replaceAll("\\s+$", "")
+		.replaceAll("\\s+", " ");
 	    if (name.length() == 0) {
 		name = DEFAULT_SUBJECT;
 	    }
