@@ -13,4 +13,4 @@
 
 # Gradle build output directory
 /.gradle
-/build
+build
