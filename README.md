@@ -3,10 +3,11 @@ A simple project to demonstrate the implementation of “hello, world” program
 
 ## Build
 ```bash
-$ javac Hello.java
+$ ./gradlew build
 ```
 
 ## Run
 ```bash
-$ java Hello
+$ java -cp "/Users/gowda/unbxd/scratch/helloj/build/classes/main" \
+       com.example.helloj.Hello
 ```
