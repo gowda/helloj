@@ -1,0 +1,17 @@
+group 'com.example'
+version '0.7.2-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "com.example.helloj.Hello"
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+run {
+    standardInput = System.in
+}

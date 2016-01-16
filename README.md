@@ -3,10 +3,10 @@ A simple project to demonstrate the implementation of “hello, world” program
 
 ## Build
 ```bash
-$ javac Hello.java
+$ ./gradlew build
 ```
 
 ## Run
 ```bash
-$ java Hello
+$ ./gradlew -q :run 2>/dev/null
 ```

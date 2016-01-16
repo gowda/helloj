@@ -6,3 +6,11 @@
 
 # Java class files
 *.class
+
+# IntelliJ IDEA related files
+/.idea
+*.iml
+
+# Gradle build output directory
+/.gradle
+/build
