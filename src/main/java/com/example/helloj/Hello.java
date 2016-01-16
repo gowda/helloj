@@ -6,7 +6,8 @@ public class Hello {
     private static final String TEMPLATE = "hello, %s!";
     private static final String DEFAULT_SUBJECT = "world";
 
-    public static void main(String[] args) {
+    public String askName() {
+        String name = null;
         Scanner scanner = null;
 
         try {
@@ -14,17 +15,25 @@ public class Hello {
             scanner = new Scanner(System.in);
             scanner.useDelimiter("\\n");
             String line = scanner.nextLine();
-            String name = line.replaceAll("^\\s+", "")
-                .replaceAll("\\s+$", "")
-                .replaceAll("\\s+", " ");
-            if (name.length() == 0) {
-                name = DEFAULT_SUBJECT;
-            }
-
-            String hello = String.format(TEMPLATE, name);
-            System.out.println(hello);
+            name = line.replaceAll("^\\s+", "")
+                    .replaceAll("\\s+$", "")
+                    .replaceAll("\\s+", " ");
         } finally {
             scanner.close();
         }
+
+        return name;
+    }
+
+    public void sayHello(String name) {
+        String subject;
+        if (name == null || name.length() == 0) {
+            subject = DEFAULT_SUBJECT;
+        } else {
+            subject = name;
+        }
+
+        String hello = String.format(TEMPLATE, subject);
+        System.out.println(hello);
     }
 }
