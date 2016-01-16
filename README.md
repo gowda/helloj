@@ -8,6 +8,5 @@ $ ./gradlew build
 
 ## Run
 ```bash
-$ java -cp "/Users/gowda/unbxd/scratch/helloj/build/classes/main" \
-       com.example.helloj.Hello
+$ ./gradlew -q :run 2>/dev/null
 ```
