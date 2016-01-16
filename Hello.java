@@ -11,7 +11,8 @@ public class Hello {
 	    System.out.print("Please enter your name: ");
 	    scanner = new Scanner(System.in);
 	    scanner.useDelimiter("\\n");
-	    String name = scanner.nextLine();
+	    String line = scanner.nextLine();
+	    String name = line.replaceAll("\\s", "");
 	    if (name.length() == 0) {
 		name = DEFAULT_SUBJECT;
 	    }
